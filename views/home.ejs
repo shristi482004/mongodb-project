@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: {
+          poppins: ['Poppins', 'sans-serif'],
+        },
+        colors: {
+          lunaBlue: '#5B60A8',
+          lunaCream: '#F4F1E6',
+          lunaGreen: '#9BE3B1',
+          lunaLavender: '#E6DDF0',
+          ink: '#2E2E2E',
+        },
+      }
+    }
+  }
+</script>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+</script>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="bg-lunaCream font-poppins text-ink">
+
+<!-- ================= HERO ================= -->
+<section class="relative bg-lunaBlue min-h-screen overflow-hidden">
+
+  <!-- clouds SVG -->
+  <svg class="absolute inset-0 w-full h-full pointer-events-none"
+       viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice">
+    <g fill="#F4F1E6">
+      <ellipse cx="300" cy="180" rx="120" ry="50"/>
+      <ellipse cx="380" cy="160" rx="90" ry="40"/>
+      <ellipse cx="1100" cy="220" rx="140" ry="55"/>
+      <ellipse cx="1180" cy="200" rx="90" ry="40"/>
+    </g>
+
+    <!-- stars -->
+    <g fill="#9BE3B1">
+      <polygon points="720,240 730,260 750,270 730,280 720,300 710,280 690,270 710,260"/>
+      <polygon points="520,180 528,195 545,202 528,210 520,225 512,210 495,202 512,195"/>
+    </g>
+  </svg>
+
+  <!-- hero content -->
+  <div class="relative z-10 flex flex-col items-center justify-center
+              min-h-screen px-6 text-center">
+
+    <h1 class="text-[clamp(4rem,12vw,9rem)] font-extrabold text-lunaCream leading-none">
+      luna
+    </h1>
+
+    <p class="mt-4 text-lunaCream/80 max-w-md">
+      The coworking space of your dreams
+    </p>
+
+  </div>
+
+  <!-- scalloped divider -->
+  <svg viewBox="0 0 1440 120" class="absolute bottom-0 w-full">
+    <path fill="#F4F1E6"
+          d="M0,64 C120,96 240,96 360,64
+             480,32 600,32 720,64
+             840,96 960,96 1080,64
+             1200,32 1320,32 1440,64
+             L1440,120 L0,120 Z"/>
+  </svg>
+</section>
+
+<!-- ================= IMAGE + CTA ================= -->
+<section class="bg-lunaCream py-20 px-6">
+  <div class="max-w-6xl mx-auto relative">
+
+    <img
+      src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d"
+      class="rounded-[2.5rem] w-full h-[420px] object-cover"
+    />
+
+    <button
+      class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2
+             bg-lunaGreen px-10 py-6 rounded-full font-bold
+             border-4 border-ink shadow-[6px_6px_0_0_#2E2E2E]">
+      BOOK A ROOM
+    </button>
+
+  </div>
+</section>
+
+<!-- ================= QUOTE ================= -->
+<section class="bg-lunaCream py-14 px-6 text-center relative">
+  <div class="bg-lunaLavender inline-block px-10 py-6 rounded-3xl">
+    <p class="max-w-xl">
+      Ever walk into a place and instantly feel like you belong?
+      That’s our goal. A space for plans, ideas, or just good company.
+    </p>
+  </div>
+
+  <span class="absolute left-20 top-6 text-lunaBlue text-xl">✦</span>
+  <span class="absolute right-20 bottom-6 text-lunaBlue text-xl">✦</span>
+</section>
+
+<!-- ================= WHAT IS ================= -->
+<section class="bg-lunaCream py-20 px-6">
+  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-14 items-center">
+
+    <!-- images -->
+    <div class="flex gap-6">
+      <img class="rounded-full w-40 h-40 object-cover"
+           src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c">
+      <img class="rounded-full w-40 h-40 object-cover mt-20"
+           src="https://images.unsplash.com/photo-1556761175-4b46a572b786">
+    </div>
+
+    <!-- text -->
+    <div>
+      <h2 class="text-4xl font-bold text-lunaBlue mb-4">
+        What is Luna?
+      </h2>
+      <p class="text-sm leading-relaxed">
+        Luna is a cozy coworking space and creative community.
+        Designed for focus, connection, and comfort — whether
+        you’re working solo or collaborating with others.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= WHY WE'RE THE BEST ================= -->
+<section class="bg-lunaBlue py-24 px-6 text-lunaCream relative">
+
+  <!-- wave top -->
+  <svg viewBox="0 0 1440 120" class="absolute top-0 w-full rotate-180">
+    <path fill="#F4F1E6"
+          d="M0,64 C120,96 240,96 360,64
+             480,32 600,32 720,64
+             840,96 960,96 1080,64
+             1200,32 1320,32 1440,64
+             L1440,120 L0,120 Z"/>
+  </svg>
+
+  <div class="max-w-6xl mx-auto pt-20">
+    <h2 class="text-5xl font-extrabold mb-14">
+      WHY WE’RE<br>THE BEST
+    </h2>
+
+    <div class="grid md:grid-cols-4 gap-8">
+      <div class="bg-lunaLavender text-ink p-6 rounded-full text-center">
+        Drop-In Friendly
+      </div>
+      <div class="bg-lunaLavender text-ink p-6 rounded-full text-center">
+        A Space for Whatever
+      </div>
+      <div class="bg-lunaLavender text-ink p-6 rounded-full text-center">
+        Events That Don’t Suck
+      </div>
+      <div class="bg-lunaLavender text-ink p-6 rounded-full text-center">
+        Actually Good Coffee
+      </div>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>

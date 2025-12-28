@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Add Student</title>
+
+  <!-- Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            poppins: ['Poppins', 'sans-serif'],
+          },
+          colors: {
+            ivory: '#FBFCEE',
+            vanilla: '#F6E6A5',
+            blue: '#3971B8',
+            green: '#C8D69B',
+            ink: '#343B1B',
+          },
+          borderRadius: {
+            xl: '1.25rem',
+            '2xl': '1.75rem',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="bg-ivory font-poppins min-h-screen flex items-center justify-center">
+
+  <div class="w-full max-w-3xl bg-vanilla border-4 border-ink
+              shadow-[8px_8px_0_0_#343B1B] rounded-2xl p-10">
+<div class="flex items-start justify-between mb-8">
+  <div>
+    <h1 class="text-4xl font-bold text-ink mb-1">SOMA</h1>
+    <p class="text-ink text-sm">Student Information System</p>
+  </div>
+
+  <a href="/read"
+     class="bg-green text-ink px-5 py-2 font-semibold border-2 border-ink
+            shadow-[4px_4px_0_0_#343B1B] rounded-xl
+            hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition">
+    View Students
+  </a>
+</div>
+
+
+    <form action="/create" method="post"
+          class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+      <% const input =
+        "w-full border-2 border-ink rounded-xl px-4 py-2 bg-ivory focus:outline-none"; %>
+
+      <div>
+        <label class="text-sm font-semibold text-ink">Name</label>
+        <input name="name" required class="<%= input %>">
+      </div>
+
+      <div>
+        <label class="text-sm font-semibold text-ink">Roll Number</label>
+        <input name="roll" required class="<%= input %>">
+      </div>
+
+      <div>
+        <label class="text-sm font-semibold text-ink">Branch</label>
+        <input name="branch" required class="<%= input %>">
+      </div>
+
+      <div>
+        <label class="text-sm font-semibold text-ink">Email</label>
+        <input type="email" name="email" required class="<%= input %>">
+      </div>
+
+      <div>
+        <label class="text-sm font-semibold text-ink">CGPA</label>
+        <input type="number" step="0.01" name="cgpa" required class="<%= input %>">
+      </div>
+
+      <div>
+        <label class="text-sm font-semibold text-ink">Profile Image URL</label>
+        <input
+          type="url"
+          name="image"
+          placeholder="https://example.com/photo.jpg"
+          class="<%= input %>"
+        >
+      </div>
+
+      <div class="md:col-span-2 mt-4">
+        <button
+          class="bg-green text-ink px-6 py-2 font-semibold border-2 border-ink
+                 shadow-[4px_4px_0_0_#343B1B] rounded-xl
+                 hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition">
+          Add Student
+        </button>
+      </div>
+
+    </form>
+  </div>
+
+</body>
+</html>

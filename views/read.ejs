@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Students</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            poppins: ['Poppins', 'sans-serif'],
+          },
+          colors: {
+            ivory: '#FBFCEE',
+            vanilla: '#F6E6A5',
+            blue: '#3971B8',
+            green: '#C8D69B',
+            ink: '#343B1B',
+            red: '#de4d4d',
+            white: '#FFFFFF',
+            sage: '#C9D8C5',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="bg-ivory font-poppins min-h-screen p-10">
+
+  <div class="flex items-center justify-between mb-10">
+  <h1 class="text-4xl font-bold text-ink">
+    Students List
+  </h1>
+
+  <a href="/"
+     class="bg-green text-ink px-6 py-3 font-semibold border-2 border-ink
+            shadow-[4px_4px_0_0_#343B1B] rounded-xl
+            hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition">
+    + Add New Student
+  </a>
+</div>
+
+
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+     <% students.forEach(function(student){ %>
+      <div class="bg-vanilla border-4 border-ink
+                  shadow-[6px_6px_0_0_#343B1B] p-6 rounded-xl">
+
+       
+          <div class="w-24 h-24 mb-4 border-2 border-ink rounded-xl overflow-hidden">
+            <img src="<%= student.image %>"
+                  alt="Student Photo"
+                 class="w-full h-full object-cover">
+          </div>
+    
+
+        <h2 class="text-xl font-bold text-ink mb-2">
+          <%= student.name %>
+        </h2>
+
+        <div class="text-sm text-ink space-y-1">
+          <p><span class="font-semibold">Roll:</span> <%= student.roll %></p>
+          <p><span class="font-semibold">Branch:</span> <%= student.branch %></p>
+          <p><span class="font-semibold">Email:</span> <%= student.email %></p>
+          <p><span class="font-semibold">CGPA:</span> <%= student.cgpa %></p>
+        </div>
+        
+<div class="flex gap-3 mt-5">
+
+  <!-- Edit Icon Button -->
+  <a href="/edit/<%= student._id %>"
+     class="w-9 h-9 flex items-center justify-center
+            bg-green border-2 border-ink rounded-lg
+            shadow-[3px_3px_0_0_#343B1B]
+            hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition"
+     title="Edit">
+
+    <svg xmlns="http://www.w3.org/2000/svg"
+         viewBox="0 0 24 24" fill="none"
+         stroke="currentColor" stroke-width="2"
+         class="w-4 h-4 text-ink">
+      <path stroke-linecap="round" stroke-linejoin="round"
+            d="M16.862 3.487a2.25 2.25 0 113.182 3.182L7.125 19.588
+               3 21l1.412-4.125L16.862 3.487z" />
+    </svg>
+
+  </a>
+
+  <!-- Delete Icon Button -->
+  <form action="/delete/<%= student._id %>" method="post">
+    <button type="submit"
+      class="w-9 h-9 flex items-center justify-center
+             bg-red border-2 border-ink rounded-lg
+             shadow-[3px_3px_0_0_#343B1B]
+             hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition"
+      title="Delete">
+
+      <svg xmlns="http://www.w3.org/2000/svg"
+           viewBox="0 0 24 24" fill="none"
+           stroke="white" stroke-width="2"
+           class="w-4 h-4 text-ink">
+        <path stroke-linecap="round" stroke-linejoin="round"
+              d="M6 7h12M9 7v10m6-10v10M10 3h4a1 1 0 011 1v3H9V4a1 1 0 011-1z" />
+      </svg>
+
+    </button>
+  </form>
+
+</div>
+
+      </div>
+       
+ <%  }); %>
+
+ </div>
+
+</body>
+</html>
