@@ -124,8 +124,8 @@ Below are some screenshots showcasing the UI and workflow of SOMA.
 
 *View all students in a card-based layout with edit and delete actions.*
 
+<img width="2940" height="1670" alt="image" src="https://github.com/user-attachments/assets/4a78710c-af51-4447-afdd-35ebc47d7d88" />
 
-<img width="2940" height="1670" alt="image" src="https://github.com/user-attachments/assets/55c6020e-2839-47ff-ae8f-8f2b044682e4" />
 
 
 
